@@ -1,3 +1,3 @@
 export default function Catalog() {
-  return <div className=""> Catalog</div>
+  return <div className="">content</div>
 }

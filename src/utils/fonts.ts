@@ -1,4 +1,4 @@
-import { Nunito, Cookie, Nunito_Sans } from 'next/font/google'
+import { Nunito, Cookie, Inter } from 'next/font/google'
 
 export const cookie = Cookie({
   variable: '--font-cookie',
@@ -11,7 +11,7 @@ export const nunito = Nunito({
   subsets: ['latin'],
 })
 
-export const nunito_sans = Nunito_Sans({
-  variable: '--font-nunito-sans',
+export const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
 })

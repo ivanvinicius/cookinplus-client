@@ -8,7 +8,18 @@ const config: Config = {
       fontFamily: {
         cookie: 'var(--font-cookie)',
         nunito: 'var(--font-nunito)',
-        'nunito-sans': 'var(--font-nunito-sans)',
+        inter: 'var(--font-inter)',
+      },
+
+      gridTemplateColumns: {
+        app: 'minmax(18rem, 20rem) 1fr',
+      },
+
+      height: {
+        100: '24rem',
+        152: '38rem',
+        'mobile-menu': 'calc(100vh - 23rem)',
+        'web-menu': 'calc(100vh - 33rem)',
       },
 
       colors: {
@@ -39,6 +50,24 @@ const config: Config = {
           '900': '#7a390d',
           '950': '#461d02',
         },
+      },
+
+      keyframes: {
+        slideDownAccordion: {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        slideUpAccordion: {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
+
+      animation: {
+        slideDownAccordion:
+          'slideDownAccordion 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+        slideUpAccordion:
+          'slideUpAccordion 300ms cubic-bezier(0.87, 0, 0.13, 1)',
       },
     },
   },

@@ -23,6 +23,7 @@
       }
     ],
 
-    "camelcase": "off"
+    "camelcase": "off",
+    "react/display-name": "off"
   }
 }
