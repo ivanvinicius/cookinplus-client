@@ -1,5 +1,3 @@
-'use client'
-
 import * as Accordion from '@radix-ui/react-accordion'
 import { ChefHat } from 'lucide-react'
 import Link from 'next/link'
@@ -19,8 +17,8 @@ export function SidebarNav() {
           </UiAccordion.Trigger>
 
           <UiAccordion.Content>
-            <li className="group list-none space-y-3 pl-7 text-base text-zinc-600">
-              <ul>
+            <ul className="group list-none space-y-3 pl-7 text-base text-zinc-600">
+              <li>
                 <Link
                   className="line-clamp-1 transition-colors duration-300 group-hover:text-ruby-600"
                   title="Café da manhã"
@@ -28,8 +26,26 @@ export function SidebarNav() {
                 >
                   Café da manhã
                 </Link>
-              </ul>
-            </li>
+              </li>
+              <li>
+                <Link
+                  className="line-clamp-1 transition-colors duration-300 group-hover:text-ruby-600"
+                  title="Café da manhã"
+                  href={'#'}
+                >
+                  Jantar
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="line-clamp-1 transition-colors duration-300 group-hover:text-ruby-600"
+                  title="Café da manhã"
+                  href={'#'}
+                >
+                  Teste
+                </Link>
+              </li>
+            </ul>
           </UiAccordion.Content>
         </UiAccordion.Item>
       </Accordion.Root>

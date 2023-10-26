@@ -1,5 +1,3 @@
-'use client'
-
 import * as Accordion from '@radix-ui/react-accordion'
 import { forwardRef, ElementRef, ComponentPropsWithoutRef } from 'react'
 import { twMerge } from 'tailwind-merge'
@@ -12,7 +10,7 @@ export const AccordionContent = forwardRef<Ref, Props>(
     <Accordion.Content
       ref={ref}
       className={twMerge([
-        'data-[state=open]:animate-slideDownAccordion data-[state=closed]:animate-slideUpAccordion',
+        'data-[state=closed]:animate-slideUpAccordion data-[state=open]:animate-slideDownAccordion',
         'overflow-hidden',
         className,
       ])}

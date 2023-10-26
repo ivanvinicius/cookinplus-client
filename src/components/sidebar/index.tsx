@@ -35,7 +35,7 @@ export function Sidebar() {
         forceMount
       >
         <ScrollArea.Root
-          className="lg:h-web-menu h-mobile-menu flex w-full "
+          className="flex h-mobile-menu w-full lg:h-web-menu "
           type="hover"
         >
           <ScrollArea.Viewport className="flex w-full overflow-y-scroll border-b border-zinc-100 lg:border-0">

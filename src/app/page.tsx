@@ -7,7 +7,7 @@ export default function Home() {
       <h1 className="font-nunito text-2xl text-zinc-900">Landing page</h1>
 
       <Link
-        className="text-md font-inter flex cursor-pointer items-center gap-1 rounded-lg border-2 border-ruby-500 bg-transparent px-4 py-2 font-bold text-ruby-500"
+        className="text-md flex cursor-pointer items-center gap-1 rounded-lg border-2 border-ruby-500 bg-transparent px-4 py-2 font-inter font-bold text-ruby-500"
         title="Ir para catálogo de receitas"
         href={'/catalog'}
       >

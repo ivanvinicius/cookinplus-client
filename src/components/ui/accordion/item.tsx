@@ -1,5 +1,3 @@
-'use client'
-
 import * as Accordion from '@radix-ui/react-accordion'
 import { forwardRef, ElementRef, ComponentPropsWithoutRef } from 'react'
 import { twMerge } from 'tailwind-merge'
