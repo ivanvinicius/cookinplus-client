@@ -9,7 +9,9 @@ export default function CatalogLayout({ children }: Props) {
     <div className="lg:grid lg:grid-cols-app">
       <Sidebar />
 
-      <main>{children}</main>
+      <main className="min-h-screen pt-20 lg:col-start-2 lg:p-3">
+        {children}
+      </main>
     </div>
   )
 }
