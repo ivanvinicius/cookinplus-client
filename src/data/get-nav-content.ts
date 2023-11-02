@@ -1,25 +1,15 @@
-import {
-  useQuery,
-  UseQueryOptions,
-  UseQueryResult,
-} from '@tanstack/react-query'
-
 import { api } from '~/lib/api'
 import { Holiday } from '~/types/holiday'
 import { Meal } from '~/types/meal'
 import { Nationality } from '~/types/nationality'
 
-interface GetResponse {
+export interface GetNavContentResponse {
   meals: Meal[]
   nationalities: Nationality[]
   holidays: Holiday[]
 }
 
-type QueryOption = UseQueryOptions<GetResponse, unknown>
-type QueryResult = UseQueryResult<GetResponse, unknown>
-type Options = Omit<QueryOption, 'queryKey' | 'queryFn'>
-
-async function get(): Promise<GetResponse> {
+export async function getNavContent(): Promise<GetNavContentResponse> {
   const pagination = '?paginate=false'
 
   const [meals, nationalities, holidays] = await Promise.all([
@@ -28,17 +18,13 @@ async function get(): Promise<GetResponse> {
     api('/holidays'.concat(pagination)),
   ])
 
+  if (!meals.ok) {
+    throw new Error()
+  }
+
   return {
     meals: await meals.json(),
     nationalities: await nationalities.json(),
     holidays: await holidays.json(),
   }
-}
-
-export function useNavContent(options: Options): QueryResult {
-  return useQuery({
-    ...options,
-    queryKey: ['nav-content'],
-    queryFn: () => get(),
-  })
 }

@@ -5,14 +5,12 @@ import { ChefHat, Flag, Sparkles } from 'lucide-react'
 import Link from 'next/link'
 
 import { UiAccordion } from '~/components/ui/accordion'
-import { useNavContent } from '~/querys/hydrated/use-nav-content'
+import { useNavContent } from '~/querys/use-nav-content'
 
 import { Skeleton } from '../skeleton'
 
 export function SidebarNav() {
-  const { data, isLoading, isError } = useNavContent({
-    staleTime: 60 * 10, // 10 min
-  })
+  const { data, isLoading, isError } = useNavContent()
 
   if (isLoading) {
     return (
@@ -46,7 +44,7 @@ export function SidebarNav() {
                 <li key={id}>
                   <Link
                     className="line-clamp-1 transition-colors duration-300 hover:text-ruby-600"
-                    href={`/category/${name}`}
+                    href={`/recipes/meals/${id}`}
                   >
                     {name}
                   </Link>
@@ -73,7 +71,7 @@ export function SidebarNav() {
                 <li key={id}>
                   <Link
                     className="line-clamp-1 transition-colors duration-300 hover:text-ruby-600"
-                    href={`/category/${name}`}
+                    href={`/recipes/nationalities/${id}`}
                   >
                     {name}
                   </Link>
@@ -100,7 +98,7 @@ export function SidebarNav() {
                 <li key={id}>
                   <Link
                     className="line-clamp-1 transition-colors duration-300 hover:text-ruby-600"
-                    href={`/category/${name}`}
+                    href={`/recipes/holidays/${id}`}
                   >
                     {name}
                   </Link>

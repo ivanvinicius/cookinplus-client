@@ -15,6 +15,10 @@ const config: Config = {
         app: 'minmax(18rem, 20rem) 1fr',
       },
 
+      width: {
+        120: '30rem',
+      },
+
       height: {
         100: '24rem',
         152: '38rem',
