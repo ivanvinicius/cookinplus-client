@@ -15,6 +15,10 @@ const config: Config = {
         app: 'minmax(18rem, 20rem) 1fr',
       },
 
+      maxWidth: {
+        content: '64rem',
+      },
+
       width: {
         120: '30rem',
       },
@@ -24,6 +28,10 @@ const config: Config = {
         152: '38rem',
         'mobile-menu': 'calc(100vh - 23rem)',
         'web-menu': 'calc(100vh - 33rem)',
+      },
+
+      screens: {
+        '4xl': '2100px',
       },
 
       colors: {

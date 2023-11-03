@@ -1,9 +1,9 @@
 import { SVGProps } from 'react'
 
-export function Logo(props: SVGProps<SVGSVGElement>) {
+export function Logo({ className, ...props }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      className={props.className}
+      className={className}
       width={568}
       height={213}
       viewBox="0 0 568 213"

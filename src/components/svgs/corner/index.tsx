@@ -1,9 +1,9 @@
 import { SVGProps } from 'react'
 
-export function Corner(props: SVGProps<SVGSVGElement>) {
+export function Corner({ className, ...props }: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      className={props.className}
+      className={className}
       width={832}
       height={142}
       viewBox="0 0 832 142"

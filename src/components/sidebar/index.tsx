@@ -20,7 +20,7 @@ export function Sidebar() {
       ])}
     >
       <div className="flex items-center justify-between">
-        <Logo className="h-11 w-auto" />
+        <Logo className="h-10 w-auto flex-shrink-0" />
 
         <Collapsible.Trigger className="lg:hidden">
           <Menu className="h-6 w-6 text-zinc-700" />
