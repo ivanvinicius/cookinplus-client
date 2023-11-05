@@ -11,7 +11,7 @@ export default function CatalogLayout({ children }: Props) {
       <Corner className="hidden lg:absolute lg:right-0 lg:top-0 lg:z-10 lg:flex lg:h-auto lg:w-120" />
       <Sidebar />
 
-      <main className="absolute flex min-h-screen w-full p-3 pt-20 lg:col-start-2 lg:p-4 lg:pt-10">
+      <main className="absolute mt-20 flex min-h-screen w-full px-3 lg:col-start-2 lg:p-4">
         {children}
       </main>
     </div>

@@ -2,8 +2,14 @@
 
 import { api } from '~/lib/api'
 import { Recipe } from '~/types/recipe'
+import { Section } from '~/types/section'
 
-export async function getRecipe(slug: string): Promise<Recipe> {
+interface GetRecipeRes {
+  recipe: Recipe
+  sections: Section[]
+}
+
+export async function getRecipe(slug: string): Promise<GetRecipeRes> {
   const response = await api('/recipes/slug/'.concat(slug))
 
   if (!response.ok) {
@@ -84,5 +90,15 @@ export async function getRecipe(slug: string): Promise<Recipe> {
     },
   } as Recipe
 
-  return recipe
+  const sections = recipe.instructions.reduce((acc: Section[], instruction) => {
+    const exists = acc.some((item) => item.id === instruction.section.id)
+
+    if (!exists) {
+      acc.push(instruction.section)
+    }
+
+    return acc
+  }, [])
+
+  return { recipe, sections }
 }

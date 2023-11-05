@@ -1,4 +1,5 @@
 import { Advice } from './advice'
+import { DifficultyType } from './difficulty'
 import { Holiday } from './holiday'
 import { Image } from './image'
 import { Ingredient } from './ingredient'
@@ -13,7 +14,7 @@ export interface Recipe {
   story: string
   cookingTime: number
   servings: number
-  difficulty: number
+  difficulty: DifficultyType
   nationality: Nationality
   image: Image
   meal: Meal

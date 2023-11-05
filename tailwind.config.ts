@@ -19,8 +19,15 @@ const config: Config = {
         content: '64rem',
       },
 
+      minHeight: {
+        64: '16rem',
+        80: '20rem',
+      },
+
       width: {
+        124: '31rem',
         120: '30rem',
+        108: '27rem',
       },
 
       height: {
@@ -32,6 +39,10 @@ const config: Config = {
 
       screens: {
         '4xl': '2100px',
+      },
+
+      borderRadius: {
+        '3xl': '32px',
       },
 
       colors: {
@@ -61,6 +72,19 @@ const config: Config = {
           '800': '#95460b',
           '900': '#7a390d',
           '950': '#461d02',
+        },
+        limeade: {
+          '50': '#feffe5',
+          '100': '#faffc7',
+          '200': '#f3ff96',
+          '300': '#e6fc5a',
+          '400': '#d5f328',
+          '500': '#b7d909',
+          '600': '#84a102',
+          '700': '#6b8407',
+          '800': '#55680c',
+          '900': '#47580f',
+          '950': '#253102',
         },
       },
 

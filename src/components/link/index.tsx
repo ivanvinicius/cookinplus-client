@@ -4,7 +4,7 @@ import { tv, VariantProps } from 'tailwind-variants'
 
 const link = tv({
   base: [
-    'flex items-center justify-center gap-2 font-inter font-semibold py-2 px-4',
+    'flex items-center justify-center gap-2 font-inter font-medium py-2 px-4',
     'transition-all duration-300',
   ],
 
