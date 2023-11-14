@@ -65,7 +65,7 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className="mt-6 flex h-full w-full items-center justify-center lg:mt-0 ">
+          <div className="mt-6 flex h-full max-h-102 w-full max-w-102 items-center justify-center lg:mt-0  lg:max-h-full lg:max-w-full">
             <Image
               src="https://cookinplus-images.s3.us-west-2.amazonaws.com/landing-page/banner.png"
               alt=""
@@ -75,7 +75,14 @@ export default async function Home() {
           </div>
         </div>
       </header>
-      <main />
+      <main
+        className={twMerge([
+          'mx-auto w-full max-w-content p-3 lg:p-4',
+          'mt-32 sm:mt-28 lg:mt-12 xl:mt-4',
+        ])}
+      >
+        asdasd
+      </main>
     </>
   )
 }

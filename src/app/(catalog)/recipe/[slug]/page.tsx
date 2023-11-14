@@ -162,14 +162,14 @@ export default async function Recipe(props: Props) {
         <div className="relative mt-4 w-full rounded-3xl border border-limeade-500 bg-white p-4 lg:p-8 ">
           <Image
             className="absolute -top-4 right-8 z-10 h-8 w-8 lg:-top-6 lg:right-16 lg:h-12 lg:w-12"
-            src={quoteSVG}
+            src="https://cookinplus-images.s3.us-west-2.amazonaws.com/landing-page/quote.svg"
             alt="quotes svg"
-            width={256}
-            height={256}
+            width={300}
+            height={300}
           />
 
           <RecipeNutriUser
-            imgSrc={nathanaJpeg}
+            imgSrc="https://cookinplus-images.s3.us-west-2.amazonaws.com/landing-page/nathana.png"
             name="Nathana Miranda"
             instagram="nathanamirandaa"
           />
