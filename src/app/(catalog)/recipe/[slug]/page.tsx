@@ -1,8 +1,6 @@
 import { Timer, Users, ShoppingBag, ChefHat, Info } from 'lucide-react'
 import Image from 'next/image'
 
-import nathanaJpeg from '~/assets/nathana.jpeg'
-import quoteSVG from '~/assets/quote.svg'
 import { FeaturedTitle } from '~/components/feature-title'
 import { RecipeListItem } from '~/components/recipe/list-item'
 import { RecipeNutriUser } from '~/components/recipe/nutri-user'

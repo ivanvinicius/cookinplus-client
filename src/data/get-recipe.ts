@@ -12,11 +12,10 @@ interface GetRecipeRes {
 export async function getRecipe(slug: string): Promise<GetRecipeRes> {
   const response = await api('/recipes/slug/'.concat(slug))
 
-  if (!response.ok) {
-    throw new Error()
-  }
+  if (!response.ok) throw new Error('Unable to fetch data')
 
   const parsed = await response.json()
+
   const data = parsed.recipe[0]
 
   const recipe = {

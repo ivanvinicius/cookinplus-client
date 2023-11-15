@@ -1,43 +1,37 @@
-import Link from 'next/link'
+import { twMerge } from 'tailwind-merge'
+
+import { RecipeCard } from '~/components/recipe/card'
+import { getRecipeGroups } from '~/data/get-recipe-groups'
 
 interface Props {
   params: { group: string[] }
   searchParams: { [key: string]: string }
 }
 
-export default function Recipes(props: Props) {
-  console.log(props)
+export default async function Recipes(props: Props) {
+  const [group, id] = props.params.group
+
+  const recipes = await getRecipeGroups({ group, id }, { paginate: false })
+
+  if (recipes.length === 0)
+    return (
+      <div>
+        <span className="font-inter text-base font-medium text-zinc-700">
+          Nenhum resultado foi encontrado...
+        </span>
+      </div>
+    )
 
   return (
-    <div className="flex flex-col gap-3">
-      <Link
-        href="../../recipe/feijao-mexicano"
-        className="flex text-lg text-blue-500"
-      >
-        feijao-mexicano
-      </Link>
-
-      <Link href="../../recipe/burritos" className="flex text-lg text-blue-500">
-        burritos
-      </Link>
-
-      <Link href="../../recipe/salsa" className="flex text-lg text-blue-500">
-        salsa
-      </Link>
-
-      <Link
-        href="../../recipe/guacamole"
-        className="flex text-lg text-blue-500"
-      >
-        guacamole
-      </Link>
-
-      <Link
-        href="../../recipe/quesadillas"
-        className="flex text-lg text-blue-500"
-      >
-        quesadillas
-      </Link>
+    <div
+      className={twMerge([
+        'flex h-fit w-full flex-wrap items-center justify-center gap-5',
+        'lg:items-start lg:justify-normal lg:gap-8',
+      ])}
+    >
+      {recipes.map((recipe) => (
+        <RecipeCard key={recipe.id} recipe={recipe} />
+      ))}
     </div>
   )
 }

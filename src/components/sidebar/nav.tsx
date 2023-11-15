@@ -31,7 +31,7 @@ export function SidebarNav() {
           className="overflow-hidden data-[state=open]:border-b data-[state=open]:border-zinc-100/50"
           value="meals"
         >
-          <UiAccordion.Trigger className="data-[state=open]:bg-red-50/50">
+          <UiAccordion.Trigger className="data-[state=open]:bg-ruby-50">
             <UiAccordion.TriggerContent icon={ChefHat} title="Refeições" />
           </UiAccordion.Trigger>
 

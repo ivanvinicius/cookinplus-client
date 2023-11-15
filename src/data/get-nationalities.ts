@@ -3,24 +3,16 @@
 import { api } from '~/lib/api'
 import { Nationality } from '~/types/nationality'
 import { Pagination } from '~/types/pagination'
-import { concatRouteParams } from '~/utils/concat-route-params'
+import { concatRoute } from '~/utils/concat-route'
 
-export async function getNationalities({
-  paginate,
-  page,
-  perPage,
-}: Pagination): Promise<Nationality[]> {
-  let resource = '/nationalities'
+export async function getNationalities(
+  pagination: Pagination,
+): Promise<Nationality[]> {
+  const route = concatRoute('/nationalities', pagination)
 
-  if (paginate) {
-    resource = concatRouteParams({ resource, page, perPage })
-  }
+  const response = await api(route)
 
-  const response = await api(resource)
-
-  if (!response.ok) {
-    throw new Error()
-  }
+  if (!response.ok) throw new Error('Unable to fetch data')
 
   const parsed = await response.json()
 
