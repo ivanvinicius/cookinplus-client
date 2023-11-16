@@ -5,6 +5,7 @@ import { FeaturedTitle } from '~/components/feature-title'
 import { RecipeListItem } from '~/components/recipe/list-item'
 import { RecipeNutriUser } from '~/components/recipe/nutri-user'
 import { ReipeSynopsis } from '~/components/recipe/synopsis'
+import { SidebarFormWidget } from '~/components/sidebar/form-widget'
 import { getRecipe } from '~/data/get-recipe'
 import { convertSecondsToHours } from '~/utils/convert-second-to-hour'
 import { convertDifficulty } from '~/utils/covert-difficulty'
@@ -19,7 +20,7 @@ export default async function Recipe(props: Props) {
   const instructionsCount = recipe.instructions.length
 
   return (
-    <div className="mx-auto flex w-full max-w-content flex-col">
+    <div className="mx-auto mt-14 flex w-full max-w-content flex-col p-4 lg:mt-0 lg:p-8">
       <div>
         <FeaturedTitle title="Receita" />
         <h1 className="font-nunito text-xl font-bold text-zinc-700 lg:text-2xl">
@@ -176,6 +177,10 @@ export default async function Recipe(props: Props) {
             {recipe.advice.description}
           </pre>
         </div>
+      </section>
+
+      <section className="lg:hidden">
+        <SidebarFormWidget />
       </section>
     </div>
   )

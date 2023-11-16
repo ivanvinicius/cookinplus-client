@@ -1,6 +1,7 @@
 'use client'
 
 import * as Accordion from '@radix-ui/react-accordion'
+import * as Collapsible from '@radix-ui/react-collapsible'
 import { ChefHat, Flag, Sparkles } from 'lucide-react'
 import Link from 'next/link'
 
@@ -43,10 +44,10 @@ export function SidebarNav() {
               {data?.meals.map(({ id, name }) => (
                 <li key={id}>
                   <Link
-                    className="line-clamp-1 transition-colors duration-300 hover:text-ruby-600"
+                    className="line-clamp-1 transition-colors duration-300 hover:text-ruby-600 active:data-[state=open]:bg-red-950"
                     href={`/recipes/meals/${id}`}
                   >
-                    {name}
+                    <Collapsible.Trigger>{name}</Collapsible.Trigger>
                   </Link>
                 </li>
               ))}
@@ -73,7 +74,7 @@ export function SidebarNav() {
                     className="line-clamp-1 transition-colors duration-300 hover:text-ruby-600"
                     href={`/recipes/nationalities/${id}`}
                   >
-                    {name}
+                    <Collapsible.Trigger>{name}</Collapsible.Trigger>
                   </Link>
                 </li>
               ))}
@@ -100,7 +101,7 @@ export function SidebarNav() {
                     className="line-clamp-1 transition-colors duration-300 hover:text-ruby-600"
                     href={`/recipes/holidays/${id}`}
                   >
-                    {name}
+                    <Collapsible.Trigger>{name}</Collapsible.Trigger>
                   </Link>
                 </li>
               ))}

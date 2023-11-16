@@ -16,23 +16,25 @@ export function RecipeCard({ recipe }: Props) {
     <NextLink
       className={twMerge([
         'flex flex-shrink-0 flex-grow-0 flex-col',
-        'max-w-70 group h-fit w-full overflow-hidden rounded-2xl lg:rounded-3xl',
+        'group h-fit w-full max-w-70 overflow-hidden rounded-2xl lg:rounded-3xl',
         'border border-zinc-100 bg-white hover:border-sun-200 hover:bg-sun-50',
         'transition-all duration-300',
       ])}
       href={`../../recipe/${recipe.slug}`}
       title="Ir para receita"
     >
-      <Image
-        className={twMerge([
-          'aspect-video h-44 w-full object-cover',
-          'transition-all duration-300 group-hover:scale-105',
-        ])}
-        src={recipe.image.url}
-        alt={recipe.name}
-        width={480}
-        height={480}
-      />
+      <div className="overflow-hidden">
+        <Image
+          className={twMerge([
+            'aspect-video h-44 w-full object-cover',
+            'transition-all duration-300 group-hover:scale-110',
+          ])}
+          src={recipe.image.url}
+          alt={recipe.name}
+          width={480}
+          height={480}
+        />
+      </div>
 
       <div className="flex flex-col gap-2 p-2 lg:gap-3 lg:p-3 ">
         <span
