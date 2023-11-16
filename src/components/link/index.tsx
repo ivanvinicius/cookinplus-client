@@ -13,7 +13,7 @@ const link = tv({
       filled: ['text-white bg-ruby-600  hover:bg-ruby-700 rounded-lg'],
       outlined: [
         'text-ruby-600 0 rounded-lg border-2 border-ruby-600 ',
-        ' hover:border-ruby-700 hover:text-ruby-70',
+        ' hover:border-ruby-700 hover:text-ruby-700',
       ],
     },
   },

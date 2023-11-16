@@ -37,14 +37,14 @@ export function SidebarNav() {
           </UiAccordion.Trigger>
 
           <UiAccordion.Content>
-            <ul className="group list-none space-y-3 pl-7 text-base text-zinc-600">
+            <ul className="group list-none space-y-3 pl-7 text-base text-zinc-700">
               {isLoading && <li>Carregando...</li>}
               {isError && <li>Houve um erro...</li>}
 
               {data?.meals.map(({ id, name }) => (
                 <li key={id}>
                   <Link
-                    className="line-clamp-1 transition-colors duration-300 hover:text-ruby-600 active:data-[state=open]:bg-red-950"
+                    className="line-clamp-1 transition-colors duration-300 hover:text-ruby-600"
                     href={`/recipes/meals/${id}`}
                   >
                     <Collapsible.Trigger>{name}</Collapsible.Trigger>
@@ -59,12 +59,12 @@ export function SidebarNav() {
           className="overflow-hidden data-[state=open]:border-b data-[state=open]:border-zinc-100/50"
           value="nationalities"
         >
-          <UiAccordion.Trigger className="data-[state=open]:bg-red-50/50">
+          <UiAccordion.Trigger className="data-[state=open]:bg-ruby-50/50">
             <UiAccordion.TriggerContent icon={Flag} title="Nacionalidades" />
           </UiAccordion.Trigger>
 
           <UiAccordion.Content>
-            <ul className="group list-none space-y-3 pl-7 text-base text-zinc-600">
+            <ul className="group list-none space-y-3 pl-7 text-base text-zinc-700">
               {isLoading && <li>Carregando...</li>}
               {isError && <li>Houve um erro...</li>}
 
@@ -86,12 +86,12 @@ export function SidebarNav() {
           className="overflow-hidden data-[state=open]:border-b data-[state=open]:border-zinc-100/50"
           value="holidays"
         >
-          <UiAccordion.Trigger className="data-[state=open]:bg-red-50/50">
+          <UiAccordion.Trigger className="data-[state=open]:bg-ruby-50/50">
             <UiAccordion.TriggerContent icon={Sparkles} title="Celebrações" />
           </UiAccordion.Trigger>
 
           <UiAccordion.Content>
-            <ul className="group list-none space-y-3 pl-7 text-base text-zinc-600">
+            <ul className="group list-none space-y-3 pl-7 text-base text-zinc-700">
               {isLoading && <li>Carregando...</li>}
               {isError && <li>Houve um erro...</li>}
 

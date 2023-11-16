@@ -46,7 +46,7 @@ export function Sidebar() {
             className="flex w-1 translate-x-4 touch-none select-none flex-col rounded-lg bg-zinc-100"
             orientation="vertical"
           >
-            <ScrollArea.Thumb className="relative rounded-lg bg-red-500 lg:bg-zinc-200" />
+            <ScrollArea.Thumb className="relative rounded-lg bg-ruby-600 lg:bg-zinc-100" />
           </ScrollArea.Scrollbar>
         </ScrollArea.Root>
 

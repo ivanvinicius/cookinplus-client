@@ -23,9 +23,9 @@ export default async function Recipes(props: Props) {
         ])}
       >
         <FeaturedTitle title="Ooops!" />
-        <span className="text-center font-nunito text-xl font-bold text-zinc-700 lg:text-2xl">
+        <h2 className="text-center font-nunito text-xl font-bold text-zinc-700 lg:text-2xl">
           Nenhum resultado foi encontrado...
-        </span>
+        </h2>
       </div>
     )
 
@@ -41,7 +41,7 @@ export default async function Recipes(props: Props) {
         <h2 className="text-center font-nunito text-xl font-bold text-zinc-700 lg:text-right lg:text-2xl">
           Nosso catálogo de receitas pra você
         </h2>
-        {/* <span className="text-center font-nunito text-sm font-normal text-zinc-400 lg:text-right lg:text-base">
+        {/* <span className="text-center font-nunito text-sm font-normal text-zinc-500 lg:text-right lg:text-base">
           Buscado por Norte americana
         </span> */}
       </div>

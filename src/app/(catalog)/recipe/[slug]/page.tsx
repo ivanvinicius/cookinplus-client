@@ -78,13 +78,13 @@ export default async function Recipe(props: Props) {
               width={256}
               height={256}
             />
-            <span className="font-nunito text-sm leading-6 text-zinc-600 lg:text-base lg:leading-7">
+            <span className="font-nunito text-sm font-semibold leading-6 text-zinc-500 lg:text-base lg:leading-7">
               Nacionalidade: {recipe.nationality.name}
             </span>
           </div>
           <pre
             title={recipe.story}
-            className="mt-3 whitespace-pre-wrap text-justify font-nunito text-sm leading-6 text-zinc-500 lg:line-clamp-[12] lg:text-base lg:leading-7"
+            className="mt-3 whitespace-pre-wrap text-justify font-nunito text-sm font-semibold leading-6 text-zinc-500 lg:line-clamp-[12] lg:text-base lg:leading-7"
           >
             {recipe.story}
           </pre>
@@ -158,7 +158,7 @@ export default async function Recipe(props: Props) {
           </h2>
         </div>
 
-        <div className="relative mt-4 w-full rounded-3xl border border-limeade-500 bg-white p-4 lg:p-8 ">
+        <div className="relative mt-4 w-full rounded-3xl border border-zinc-100 bg-white p-4 lg:p-8 ">
           <Image
             className="absolute -top-4 right-8 z-10 h-8 w-8 lg:-top-6 lg:right-16 lg:h-12 lg:w-12"
             src="https://cookinplus-images.s3.us-west-2.amazonaws.com/landing-page/quote.svg"
@@ -173,7 +173,7 @@ export default async function Recipe(props: Props) {
             instagram="nathanamirandaa"
           />
 
-          <pre className="mt-4 whitespace-pre-wrap text-justify font-nunito text-sm leading-6 text-zinc-500 lg:text-base lg:leading-7">
+          <pre className="mt-4 whitespace-pre-wrap text-justify font-nunito text-sm font-semibold leading-6 text-zinc-500 lg:text-base lg:leading-7">
             {recipe.advice.description}
           </pre>
         </div>

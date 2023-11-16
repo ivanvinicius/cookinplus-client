@@ -26,7 +26,7 @@ export const AccordionTrigger = forwardRef<Ref, Props>(
         <ChevronDown
           className={twMerge([
             'group-hover:text-ruby-600 group-data-[state=open]:rotate-180 group-data-[state=open]:text-ruby-600',
-            'h-5 w-5 text-zinc-400 ',
+            'h-5 w-5 text-zinc-500 ',
             'transition-transform duration-300',
           ])}
           aria-hidden

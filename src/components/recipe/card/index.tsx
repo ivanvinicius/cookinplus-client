@@ -40,7 +40,7 @@ export function RecipeCard({ recipe }: Props) {
         <span
           className={twMerge([
             'line-clamp-2 font-nunito text-base font-semibold lg:text-lg/6',
-            'text-zinc-700 group-hover:text-sun-600',
+            'text-zinc-700 group-hover:text-sun-550',
             'transition-all duration-300',
           ])}
         >

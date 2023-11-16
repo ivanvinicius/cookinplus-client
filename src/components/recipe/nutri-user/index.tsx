@@ -27,7 +27,7 @@ export function RecipeNutriUser({ imgSrc, name, instagram }: Props) {
         <strong className="font-nunito text-base font-semibold text-zinc-700 lg:text-lg">
           {name}
         </strong>
-        <span className="bg-gradient-to-b from-ruby-500 to-violet-700 bg-clip-text text-sm text-transparent lg:text-base">
+        <span className="bg-gradient-to-b from-sun-600 to-violet-700 bg-clip-text text-sm text-transparent lg:text-base">
           @{instagram}
         </span>
       </div>

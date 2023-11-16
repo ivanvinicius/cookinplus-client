@@ -19,7 +19,7 @@ export function RecipeCardInfo({ icon: Icon, description }: Props) {
       <span
         className={twMerge([
           'line-clamp-1 font-nunito text-sm font-medium lg:text-base',
-          'text-zinc-400 group-hover:text-sun-550',
+          'text-zinc-500 group-hover:text-sun-550',
           'transition-all  duration-300',
         ])}
       >

@@ -11,7 +11,7 @@ export function RecipeListItem({ children, description }: Props) {
     <>
       <div
         className={twMerge([
-          'group-odd:bg-sun-500 group-even:bg-ruby-500',
+          'group-odd:bg-sun-500 group-even:bg-ruby-600',
           'flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full ',
           'lg:h-12 lg:w-12',
         ])}
