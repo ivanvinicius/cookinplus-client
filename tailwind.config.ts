@@ -15,11 +15,40 @@ const config: Config = {
         app: 'minmax(18rem, 20rem) 1fr',
       },
 
+      maxWidth: {
+        content: '64rem',
+        102: '25.5rem',
+        70: '17.5rem',
+      },
+
+      maxHeight: {
+        102: '25.5rem',
+      },
+
+      minHeight: {
+        64: '16rem',
+        80: '20rem',
+      },
+
+      width: {
+        124: '31rem',
+        120: '30rem',
+        108: '27rem',
+      },
+
       height: {
         100: '24rem',
         152: '38rem',
         'mobile-menu': 'calc(100vh - 23rem)',
         'web-menu': 'calc(100vh - 33rem)',
+      },
+
+      screens: {
+        '4xl': '2100px',
+      },
+
+      borderRadius: {
+        '3xl': '32px',
       },
 
       colors: {

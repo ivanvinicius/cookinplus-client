@@ -1,6 +1,10 @@
 {
-  "extends": ["@rocketseat/eslint-config/next", "next/core-web-vitals"],
-  "plugins": ["eslint-plugin-import-helpers"],
+  "extends": [
+    "@rocketseat/eslint-config/next",
+    "next/core-web-vitals",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
+  ],
+  "plugins": ["eslint-plugin-import-helpers", "@tanstack/query"],
 
   "rules": {
     "react/self-closing-comp": [
@@ -23,7 +27,16 @@
       }
     ],
 
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^(props|rest)$"
+      }
+    ],
+
     "camelcase": "off",
-    "react/display-name": "off"
+    "react/display-name": "off",
+    "@tanstack/query/exhaustive-deps": "error",
+    "@tanstack/query/stable-query-client": "error"
   }
 }
