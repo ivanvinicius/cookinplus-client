@@ -23,10 +23,5 @@ sun 200
 sun 500
 sun 550 hover
 
-
-
-melhorar cores no nav
-
-ver altura do menu pois está escondendo itens e dificil rolagem em telas pequenas
-
- 
+# criar tela de loading
+# ver scroll do nav
