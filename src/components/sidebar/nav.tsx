@@ -3,7 +3,7 @@
 import * as Accordion from '@radix-ui/react-accordion'
 import * as Collapsible from '@radix-ui/react-collapsible'
 import { ChefHat, Flag, Sparkles } from 'lucide-react'
-import Link from 'next/link'
+import NextLink from 'next/link'
 
 import { UiAccordion } from '~/components/ui/accordion'
 import { useNavContent } from '~/querys/use-nav-content'
@@ -37,18 +37,19 @@ export function SidebarNav() {
           </UiAccordion.Trigger>
 
           <UiAccordion.Content>
-            <ul className="group list-none space-y-3 pl-7 text-base text-zinc-700">
+            <ul className="group list-none pl-10 text-base text-zinc-700">
               {isLoading && <li>Carregando...</li>}
               {isError && <li>Houve um erro...</li>}
 
               {data?.meals.map(({ id, name }) => (
                 <li key={id}>
-                  <Link
-                    className="line-clamp-1 transition-colors duration-300 hover:text-ruby-600"
-                    href={`/recipes/meals/${id}`}
-                  >
-                    <Collapsible.Trigger>{name}</Collapsible.Trigger>
-                  </Link>
+                  <NextLink href={`/recipes/meals/${id}`} title={name}>
+                    <Collapsible.Trigger className="group/link w-full py-1.5">
+                      <span className="line-clamp-1 text-start transition-colors duration-300 group-hover/link:text-ruby-600">
+                        {name}
+                      </span>
+                    </Collapsible.Trigger>
+                  </NextLink>
                 </li>
               ))}
             </ul>
@@ -64,18 +65,19 @@ export function SidebarNav() {
           </UiAccordion.Trigger>
 
           <UiAccordion.Content>
-            <ul className="group list-none space-y-3 pl-7 text-base text-zinc-700">
+            <ul className="group list-none pl-10 text-base text-zinc-700">
               {isLoading && <li>Carregando...</li>}
               {isError && <li>Houve um erro...</li>}
 
               {data?.nationalities.map(({ id, name }) => (
                 <li key={id}>
-                  <Link
-                    className="line-clamp-1 transition-colors duration-300 hover:text-ruby-600"
-                    href={`/recipes/nationalities/${id}`}
-                  >
-                    <Collapsible.Trigger>{name}</Collapsible.Trigger>
-                  </Link>
+                  <NextLink href={`/recipes/nationalities/${id}`} title={name}>
+                    <Collapsible.Trigger className="group/link w-full py-1.5">
+                      <span className="line-clamp-1 text-start transition-colors duration-300 group-hover/link:text-ruby-600">
+                        {name}
+                      </span>
+                    </Collapsible.Trigger>
+                  </NextLink>
                 </li>
               ))}
             </ul>
@@ -91,18 +93,19 @@ export function SidebarNav() {
           </UiAccordion.Trigger>
 
           <UiAccordion.Content>
-            <ul className="group list-none space-y-3 pl-7 text-base text-zinc-700">
+            <ul className="group list-none pl-10 text-base text-zinc-700">
               {isLoading && <li>Carregando...</li>}
               {isError && <li>Houve um erro...</li>}
 
               {data?.holidays.map(({ id, name }) => (
                 <li key={id}>
-                  <Link
-                    className="line-clamp-1 transition-colors duration-300 hover:text-ruby-600"
-                    href={`/recipes/holidays/${id}`}
-                  >
-                    <Collapsible.Trigger>{name}</Collapsible.Trigger>
-                  </Link>
+                  <NextLink href={`/recipes/holidays/${id}`} title={name}>
+                    <Collapsible.Trigger className="group/link w-full py-1.5">
+                      <span className="line-clamp-1 text-start transition-colors duration-300 group-hover/link:text-ruby-600">
+                        {name}
+                      </span>
+                    </Collapsible.Trigger>
+                  </NextLink>
                 </li>
               ))}
             </ul>

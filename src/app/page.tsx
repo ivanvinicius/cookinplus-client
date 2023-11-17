@@ -1,4 +1,4 @@
-import { ChefHat } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import { twMerge } from 'tailwind-merge'
 
@@ -20,8 +20,8 @@ export default async function Home() {
           <Logo className="h-10 w-auto flex-shrink-0 " />
 
           <Link href={'/recipes/meals/cabb452a-8e40-4b35-ab8e-1f56aadeed7a'}>
-            Receitas
-            <ChefHat className="h-5 w-5" />
+            Explorar receitas
+            <ChevronRight className="h-5 w-5" />
           </Link>
         </nav>
 
@@ -42,7 +42,7 @@ export default async function Home() {
             </h1>
 
             <span className="mt-6 text-center font-nunito text-sm font-medium text-white lg:mt-8 lg:text-left lg:text-base">
-              Nacionalidades que estão nas nossas receitas
+              Diversidade de países na nossa culinária...
             </span>
 
             <div className="mt-4 flex w-auto flex-wrap items-center justify-center gap-6 lg:justify-start">
@@ -152,9 +152,9 @@ export default async function Home() {
 
             <p className="text-center font-nunito text-sm font-medium text-zinc-500  lg:text-base">
               É hora de criar, de experimentar, de se divertir. É hora de reunir
-              a família e os amigos para compartilhar uma refeição deliciosa.Não
-              importa se você é um cozinheiro experiente ou um novato, a cozinha
-              é um lugar para todos.
+              a família e os amigos para compartilhar uma refeição deliciosa.
+              Não importa se você é um cozinheiro experiente ou um novato, a
+              cozinha é um lugar para todos.
             </p>
           </div>
 
@@ -168,10 +168,12 @@ export default async function Home() {
               quality={100}
             />
           </div>
+        </section>
 
+        <section className="mx-auto flex w-fit pb-8">
           <Link href={'/recipes/meals/cabb452a-8e40-4b35-ab8e-1f56aadeed7a'}>
-            Ir para as receitas
-            <ChefHat className="h-5 w-5" />
+            Explorar receitas
+            <ChevronRight className="h-5 w-5" />
           </Link>
         </section>
       </main>

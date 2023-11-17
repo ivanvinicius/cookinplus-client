@@ -22,3 +22,6 @@ ruby 700 hover
 sun 200
 sun 500
 sun 550 hover
+
+# criar tela de loading
+# ver scroll do nav
