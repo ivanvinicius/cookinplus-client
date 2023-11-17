@@ -18,7 +18,7 @@ export const AccordionContent = forwardRef<Ref, Props>(
       ])}
       {...props}
     >
-      <div className="p-3">{children}</div>
+      <div className="py-1.5">{children}</div>
     </Accordion.Content>
   ),
 )

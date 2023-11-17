@@ -20,8 +20,8 @@ export function RecipeNutriUser({ imgSrc, name, instagram }: Props) {
         className="aspect-square h-16 w-16 rounded-full object-cover lg:h-20 lg:w-20"
         src={imgSrc}
         alt="nutritionist"
-        width={256}
-        height={256}
+        width={128}
+        height={128}
       />
       <div className="flex flex-col">
         <strong className="font-nunito text-base font-semibold text-zinc-700 lg:text-lg">
