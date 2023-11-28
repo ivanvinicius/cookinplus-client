@@ -33,6 +33,8 @@ export interface GetRecipeGroupsRes {
   }
 }
 
+const DAY_IN_SECONDS = 60 * 60 * 24
+
 export async function getRecipeGroups(
   { group, id }: Props,
   pagination: Pagination,
@@ -41,7 +43,7 @@ export async function getRecipeGroups(
 
   const response = await api(route, {
     next: {
-      revalidate: 1000 * 60 * 60 * 12, // 12h
+      revalidate: DAY_IN_SECONDS,
     },
   })
 

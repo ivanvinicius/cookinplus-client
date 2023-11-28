@@ -30,20 +30,20 @@ export function Sidebar() {
       <Collapsible.Content
         className={twMerge([
           'relative data-[state=closed]:sr-only lg:data-[state=closed]:not-sr-only',
-          'flex flex-1 flex-col',
+          'flex flex-1 flex-col justify-between gap-4',
         ])}
         forceMount
       >
         <ScrollArea.Root
-          className="absolute z-20 flex max-h-[16rem] min-h-[16rem] w-full rounded-lg"
-          type="hover"
+          className="absolute z-20 flex h-[16rem] min-h-[16rem] border-b border-zinc-100 lg:h-web-menu lg:border-0"
+          type="auto"
         >
           <ScrollArea.Viewport className="flex w-full overflow-y-scroll border-b border-zinc-100 lg:border-0">
             <SidebarNav />
           </ScrollArea.Viewport>
 
           <ScrollArea.Scrollbar
-            className="flex w-1 translate-x-4 touch-none select-none flex-col rounded-lg bg-ruby-50"
+            className="flex w-1 translate-x-2 touch-none select-none flex-col rounded-lg bg-ruby-100 lg:translate-x-4 lg:bg-ruby-50"
             orientation="vertical"
           >
             <ScrollArea.Thumb className="relative rounded-lg bg-ruby-600" />
