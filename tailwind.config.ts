@@ -39,8 +39,7 @@ const config: Config = {
       height: {
         100: '24rem',
         152: '38rem',
-        'mobile-menu': 'calc(100vh - 23rem)',
-        'web-menu': 'calc(100vh - 33rem)',
+        'web-menu': 'calc(100vh - 20rem)',
       },
 
       screens: {

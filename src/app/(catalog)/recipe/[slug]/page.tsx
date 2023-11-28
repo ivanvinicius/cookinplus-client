@@ -179,7 +179,7 @@ export default async function Recipe(props: Props) {
         </div>
       </section>
 
-      <section className="lg:hidden">
+      <section className="mt-8 lg:hidden">
         <SidebarFormWidget />
       </section>
     </div>

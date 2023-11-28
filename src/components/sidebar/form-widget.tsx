@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export function SidebarFormWidget() {
   return (
-    <div className="mt-8 flex flex-col items-start gap-4 rounded-lg bg-violet-100 px-4 py-5 font-inter lg:mt-auto">
+    <div className="flex flex-col items-start gap-4 rounded-lg bg-violet-100 px-4 py-5 font-inter ">
       <span className="text-md flex items-center gap-1 font-medium text-violet-600">
         Olá <Hand className="h-4 w-4 text-violet-600" />
       </span>
