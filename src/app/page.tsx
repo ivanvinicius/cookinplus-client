@@ -184,7 +184,7 @@ export default async function Home() {
         <section className="flex w-full flex-col-reverse items-center gap-4 lg:flex-row lg:gap-8">
           <div className="flex w-full justify-center lg:justify-end">
             <Image
-              className="h-[18rem] w-full max-w-70 rounded-3xl object-cover object-bottom lg:h-[24.5rem]"
+              className="h-[18rem] w-full max-w-70 rounded-3xl object-cover object-top lg:h-[24.5rem]"
               src="https://images.pexels.com/photos/3992370/pexels-photo-3992370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               alt=""
               width={500}
@@ -225,7 +225,7 @@ export default async function Home() {
 
           <div className="flex w-full justify-center lg:justify-start">
             <Image
-              className="h-[18rem] w-full max-w-70 rounded-3xl object-cover object-top lg:h-[24.5rem] "
+              className="h-[18rem] w-full max-w-70 rounded-3xl object-cover object-center lg:h-[24.5rem] "
               src="https://images.pexels.com/photos/8939309/pexels-photo-8939309.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               alt=""
               width={500}
@@ -238,7 +238,7 @@ export default async function Home() {
         <section className="flex w-full flex-col-reverse items-center gap-4 lg:flex-row lg:gap-8">
           <div className="flex w-full justify-center lg:justify-end">
             <Image
-              className="h-[18rem] w-full max-w-70 rounded-3xl object-cover object-bottom lg:h-[24.5rem]"
+              className="h-[18rem] w-full max-w-70 rounded-3xl object-cover object-center lg:h-[24.5rem]"
               src="https://images.pexels.com/photos/6517193/pexels-photo-6517193.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               alt=""
               width={500}
@@ -259,6 +259,33 @@ export default async function Home() {
               Desenvolva suas habilidades na cozinha através de nossos cursos,
               transformando ingredientes em experiências gastronômicas.
             </p>
+          </div>
+        </section>
+
+        <section className="flex w-full flex-col items-center gap-4 lg:flex-row lg:gap-8">
+          <div className="flex w-full max-w-2xl flex-col gap-3 lg:gap-4">
+            <div className="flex flex-col items-center lg:items-end">
+              <FeaturedTitle title="Disciplina" />
+              <h2 className="text-center font-nunito text-xl font-bold text-zinc-700 lg:text-end lg:text-3xl">
+                Plano alimentar
+              </h2>
+            </div>
+
+            <p className="text-center font-nunito text-sm font-medium text-zinc-500 lg:text-end lg:text-base">
+              Receitas caloricamente equilibradas, perfeitamente alinhadas com
+              suas metas calóricas.
+            </p>
+          </div>
+
+          <div className="flex w-full justify-center lg:justify-start">
+            <Image
+              className="h-[18rem] w-full max-w-70 rounded-3xl object-cover object-bottom lg:h-[24.5rem] "
+              src="https://images.pexels.com/photos/8844553/pexels-photo-8844553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt=""
+              width={500}
+              height={600}
+              quality={100}
+            />
           </div>
         </section>
 
