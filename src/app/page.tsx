@@ -86,25 +86,22 @@ export default async function Home() {
         <section className="flex w-full flex-col items-center gap-4 lg:flex-row lg:gap-8">
           <div className="flex w-full max-w-2xl flex-col gap-3 lg:gap-4">
             <div className="flex flex-col items-center lg:items-end">
-              <FeaturedTitle title="Propósito" />
+              <FeaturedTitle title="Versatilidade" />
               <h2 className="text-center font-nunito text-xl font-bold text-zinc-700 lg:text-end lg:text-3xl">
-                Descubra um mundo de possibilidades e deixe sua criatividade
-                assumir o controle.
+                Um mundo de possibilidades
               </h2>
             </div>
 
             <p className="text-center font-nunito text-sm font-medium text-zinc-500 lg:text-end lg:text-base">
-              Milhares de receitas que você pode fazer de onde estiver, com
-              dicas de preparo e ajuda de nutricionistas. Tudo isso para
-              facilitar o seu dia-dia e conhecer um pouco mais da incrível
-              variedade de alimentos consumidos no Brasil e no mundo.
+              Conheça um pouco mais da incrível variedade de alimentos
+              consumidos no Brasil e no mundo.
             </p>
           </div>
 
           <div className="flex w-full justify-center lg:justify-start">
             <Image
-              className="h-[18rem] w-full max-w-70 rounded-3xl object-cover object-top lg:h-auto "
-              src="https://images.pexels.com/photos/3992370/pexels-photo-3992370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              className="h-[18rem] w-full max-w-70 rounded-3xl object-cover object-top lg:h-[24.5rem] "
+              src="https://images.pexels.com/photos/2543270/pexels-photo-2543270.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               alt=""
               width={500}
               height={600}
@@ -116,7 +113,7 @@ export default async function Home() {
         <section className="flex w-full flex-col-reverse items-center gap-4 lg:flex-row lg:gap-8">
           <div className="flex w-full justify-center lg:justify-end">
             <Image
-              className="h-[18rem] w-full max-w-70 rounded-3xl object-cover object-bottom lg:h-auto "
+              className="h-[18rem] w-full max-w-70 rounded-3xl object-cover object-bottom lg:h-[24.5rem]"
               src="https://images.pexels.com/photos/3679973/pexels-photo-3679973.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               alt=""
               width={500}
@@ -128,40 +125,58 @@ export default async function Home() {
           <div className="flex w-full max-w-2xl flex-col gap-3 lg:gap-4">
             <div className="flex flex-col items-center lg:items-start">
               <FeaturedTitle title="Nutrição" />
-              <h2 className="text-center font-nunito text-xl font-bold text-zinc-700 lg:text-start lg:text-3xl">
-                Tenha dicas nutricionais em suas receitas.
+              <h2 className="text-start font-nunito text-xl font-bold text-zinc-700 lg:text-start lg:text-3xl">
+                Orientações para uma vida saudável
               </h2>
             </div>
 
             <p className="text-center font-nunito text-sm font-medium text-zinc-500 lg:text-start lg:text-base">
-              A saúde vem em primeiro lugar! Dessa forma, todas as nossas
-              receitas contam com dicas nutricionais valiosas, que vão te ajudar
-              a ter uma alimentação mais balanceada e saudável.
+              Além de deliciosas receitas, você encontra dicas nutricionais
+              valiosas, elaboradas por profissionais especializados na área.
             </p>
+
+            <div className="flex justify-center lg:justify-start">
+              <Link href={'../nutrition'}>Catálogo nutricional</Link>
+            </div>
           </div>
         </section>
 
-        <section className="flex w-full flex-col items-center gap-3 lg:gap-4">
+        <section className="flex w-full flex-col items-center gap-3  lg:gap-4">
           <div className="flex w-full max-w-2xl flex-col items-center gap-3 lg:gap-4">
             <div className="flex flex-col items-center">
-              <FeaturedTitle title="Hora de cozinhar" />
+              <FeaturedTitle title="Futuro" />
               <h2 className="text-center font-nunito text-xl font-bold text-zinc-700 lg:text-3xl">
-                As melhores receitas são aquelas feitas com amor e dedicação.
+                O próximo passo nunca será o último
               </h2>
             </div>
 
             <p className="text-center font-nunito text-sm font-medium text-zinc-500  lg:text-base">
-              É hora de criar, de experimentar, de se divertir. É hora de reunir
-              a família e os amigos para compartilhar uma refeição deliciosa.
-              Não importa se você é um cozinheiro experiente ou um novato, a
-              cozinha é um lugar para todos.
+              Confira algumas funcionalidades que serão implementadas na nossa
+              plataforma futuramente.
+            </p>
+          </div>
+        </section>
+
+        <section className="flex w-full flex-col items-center gap-4 lg:flex-row lg:gap-8">
+          <div className="flex w-full max-w-2xl flex-col gap-3 lg:gap-4">
+            <div className="flex flex-col items-center lg:items-end">
+              <FeaturedTitle title="Partilhe" />
+              <h2 className="text-center font-nunito text-xl font-bold text-zinc-700 lg:text-end lg:text-3xl">
+                Compartilhe suas receitas
+              </h2>
+            </div>
+
+            <p className="text-center font-nunito text-sm font-medium text-zinc-500 lg:text-end lg:text-base">
+              Faça parte da nossa comunidade culinária! Compartilhe suas
+              receitas especiais e junte-se a nós na construção de um mundo de
+              sabores.
             </p>
           </div>
 
-          <div className="flex w-full justify-center">
+          <div className="flex w-full justify-center lg:justify-start">
             <Image
-              className="h-auto w-full max-w-102 rounded-3xl object-cover object-bottom lg:max-w-xl "
-              src="https://images.pexels.com/photos/6944040/pexels-photo-6944040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              className="h-[18rem] w-full max-w-70 rounded-3xl object-cover object-top lg:h-[24.5rem] "
+              src="https://images.pexels.com/photos/8715596/pexels-photo-8715596.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               alt=""
               width={500}
               height={600}
@@ -170,11 +185,136 @@ export default async function Home() {
           </div>
         </section>
 
-        <section className="mx-auto flex w-fit pb-8">
-          <Link href={'/recipes/meals/cabb452a-8e40-4b35-ab8e-1f56aadeed7a'}>
-            Explorar receitas
-            <ChevronRight className="h-5 w-5" />
-          </Link>
+        <section className="flex w-full flex-col-reverse items-center gap-4 lg:flex-row lg:gap-8">
+          <div className="flex w-full justify-center lg:justify-end">
+            <Image
+              className="h-[18rem] w-full max-w-70 rounded-3xl object-cover object-top lg:h-[24.5rem]"
+              src="https://images.pexels.com/photos/3992370/pexels-photo-3992370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt=""
+              width={500}
+              height={600}
+              quality={100}
+            />
+          </div>
+
+          <div className="flex w-full max-w-2xl flex-col gap-3 lg:gap-4">
+            <div className="flex flex-col items-center lg:items-start">
+              <FeaturedTitle title="Destaque" />
+              <h2 className="text-start font-nunito text-xl font-bold text-zinc-700 lg:text-start lg:text-3xl">
+                Suas receitas favoritas
+              </h2>
+            </div>
+
+            <p className="text-center font-nunito text-sm font-medium text-zinc-500 lg:text-start lg:text-base">
+              Escolha suas receitas favoritas em nosso catálogo e transforme
+              cada preparo em uma experiência única.
+            </p>
+          </div>
+        </section>
+
+        <section className="flex w-full flex-col items-center gap-4 lg:flex-row lg:gap-8">
+          <div className="flex w-full max-w-2xl flex-col gap-3 lg:gap-4">
+            <div className="flex flex-col items-center lg:items-end">
+              <FeaturedTitle title="Facilite" />
+              <h2 className="text-center font-nunito text-xl font-bold text-zinc-700 lg:text-end lg:text-3xl">
+                Simplifique sua vida na cozinha
+              </h2>
+            </div>
+
+            <p className="text-center font-nunito text-sm font-medium text-zinc-500 lg:text-end lg:text-base">
+              Crie seu cardápio semanal automaticamente, e tenha acesso a lista
+              de compras do que você vai precisar.
+            </p>
+          </div>
+
+          <div className="flex w-full justify-center lg:justify-start">
+            <Image
+              className="h-[18rem] w-full max-w-70 rounded-3xl object-cover object-center lg:h-[24.5rem] "
+              src="https://images.pexels.com/photos/8939309/pexels-photo-8939309.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt=""
+              width={500}
+              height={600}
+              quality={100}
+            />
+          </div>
+        </section>
+
+        <section className="flex w-full flex-col-reverse items-center gap-4 lg:flex-row lg:gap-8">
+          <div className="flex w-full justify-center lg:justify-end">
+            <Image
+              className="h-[18rem] w-full max-w-70 rounded-3xl object-cover object-center lg:h-[24.5rem]"
+              src="https://images.pexels.com/photos/6517193/pexels-photo-6517193.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt=""
+              width={500}
+              height={600}
+              quality={100}
+            />
+          </div>
+
+          <div className="flex w-full max-w-2xl flex-col gap-3 lg:gap-4">
+            <div className="flex flex-col items-center lg:items-start">
+              <FeaturedTitle title="Domine" />
+              <h2 className="text-start font-nunito text-xl font-bold text-zinc-700 lg:text-start lg:text-3xl">
+                Aprimore-se na culinária
+              </h2>
+            </div>
+
+            <p className="text-center font-nunito text-sm font-medium text-zinc-500 lg:text-start lg:text-base">
+              Desenvolva suas habilidades na cozinha através de nossos cursos,
+              transformando ingredientes em experiências gastronômicas.
+            </p>
+          </div>
+        </section>
+
+        <section className="flex w-full flex-col items-center gap-4 lg:flex-row lg:gap-8">
+          <div className="flex w-full max-w-2xl flex-col gap-3 lg:gap-4">
+            <div className="flex flex-col items-center lg:items-end">
+              <FeaturedTitle title="Disciplina" />
+              <h2 className="text-center font-nunito text-xl font-bold text-zinc-700 lg:text-end lg:text-3xl">
+                Plano alimentar
+              </h2>
+            </div>
+
+            <p className="text-center font-nunito text-sm font-medium text-zinc-500 lg:text-end lg:text-base">
+              Receitas caloricamente equilibradas, perfeitamente alinhadas com
+              suas metas calóricas.
+            </p>
+          </div>
+
+          <div className="flex w-full justify-center lg:justify-start">
+            <Image
+              className="h-[18rem] w-full max-w-70 rounded-3xl object-cover object-bottom lg:h-[24.5rem] "
+              src="https://images.pexels.com/photos/8844553/pexels-photo-8844553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt=""
+              width={500}
+              height={600}
+              quality={100}
+            />
+          </div>
+        </section>
+
+        <section className="flex w-full flex-col items-center gap-3 lg:gap-4">
+          <div className="flex w-full max-w-2xl flex-col items-center gap-3 lg:gap-4">
+            <div className="flex flex-col items-center">
+              <FeaturedTitle title="Mão na massa" />
+              <h2 className="text-center font-nunito text-xl font-bold text-zinc-700 lg:text-3xl">
+                Receitas feitas com amor e dedicação
+              </h2>
+            </div>
+
+            <p className="text-center font-nunito text-sm font-medium text-zinc-500  lg:text-base">
+              É hora de cozinhar, experimentar e se divertir, reunindo
+              familiares e amigos para compartilhar deliciosas refeições, seja
+              você um cozinheiro experiente ou iniciante.
+            </p>
+          </div>
+
+          <div className="mx-auto flex w-fit pb-32">
+            <Link href={'/recipes/meals/cabb452a-8e40-4b35-ab8e-1f56aadeed7a'}>
+              Explorar receitas
+              <ChevronRight className="h-5 w-5" />
+            </Link>
+          </div>
         </section>
       </main>
     </>

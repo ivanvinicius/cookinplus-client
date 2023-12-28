@@ -2,6 +2,7 @@ import { Timer, Users, ShoppingBag, ChefHat, Info } from 'lucide-react'
 import Image from 'next/image'
 
 import { FeaturedTitle } from '~/components/feature-title'
+import { Link } from '~/components/link'
 import { RecipeListItem } from '~/components/recipe/list-item'
 import { RecipeNutriUser } from '~/components/recipe/nutri-user'
 import { ReipeSynopsis } from '~/components/recipe/synopsis'
@@ -99,11 +100,11 @@ export default async function Recipe(props: Props) {
           </h2>
         </div>
 
-        <ul className="mt-4 flex flex-col gap-2 divide-y divide-zinc-100 lg:gap-3">
+        <ul className="mt-4 flex flex-col divide-y divide-zinc-100 ">
           {recipe.ingredients.map((igredient) => (
             <li
               key={igredient.id}
-              className="group flex w-full items-center justify-start gap-4  p-3 lg:max-w-3xl "
+              className="group flex w-full items-center justify-start gap-4 py-4 lg:max-w-3xl "
             >
               <RecipeListItem description={igredient.description}>
                 <ShoppingBag className="h-4 w-4 text-white lg:h-6 lg:w-6" />
@@ -125,13 +126,13 @@ export default async function Recipe(props: Props) {
                 {section.name === 'Sem seção' ? 'Instruções' : section.name}
               </h2>
 
-              <div className="mt-4 flex flex-col gap-2 divide-y divide-zinc-100 lg:gap-3">
+              <div className="mt-4 flex flex-col divide-y divide-zinc-100 ">
                 {recipe.instructions.map((instruction, index) => {
                   if (instruction.section.id === section.id) {
                     return (
                       <li
                         key={instruction.id}
-                        className="group flex w-full items-center justify-start gap-4 p-3 lg:max-w-3xl"
+                        className="group flex w-full items-center justify-start gap-4 py-4 lg:max-w-3xl"
                       >
                         <RecipeListItem description={instruction.description}>
                           <span className="font-nunito text-base font-bold text-white lg:text-xl">
@@ -151,31 +152,23 @@ export default async function Recipe(props: Props) {
       </section>
 
       <section className="mt-16">
-        <div className="flex flex-col lg:items-center lg:justify-center lg:text-center">
-          <FeaturedTitle title="Dica da nutricionista" />
+        <div className="flex flex-col items-center justify-center text-center">
+          <FeaturedTitle title="Nutrição" />
           <h2 className="font-nunito text-xl font-bold leading-none text-zinc-700 lg:text-2xl">
-            Comer bem para viver melhor
+            Catálogo nutricional
           </h2>
         </div>
 
-        <div className="relative mt-4 w-full rounded-3xl border border-zinc-100 bg-white p-4 lg:p-8 ">
-          <Image
-            className="absolute -top-4 right-8 z-10 h-8 w-8 lg:-top-6 lg:right-16 lg:h-12 lg:w-12"
-            src="https://cookinplus-images.s3.us-west-2.amazonaws.com/landing-page/quote.svg"
-            alt="quotes svg"
-            width={300}
-            height={300}
-          />
-
+        <div className="mt-4 flex w-full flex-col items-center justify-between gap-8 rounded-3xl border border-zinc-100 bg-white p-4 lg:flex-row lg:p-8">
           <RecipeNutriUser
             imgSrc="https://cookinplus-images.s3.us-west-2.amazonaws.com/landing-page/nathana.png"
             name="Nathana Miranda"
             instagram="nathanamirandaa"
           />
 
-          <pre className="mt-4 whitespace-pre-wrap text-justify font-nunito text-sm font-semibold leading-6 text-zinc-500 lg:text-base lg:leading-7">
-            {recipe.advice.description}
-          </pre>
+          <Link href={'../nutrition'} variant="filled">
+            Catálogo nutricional
+          </Link>
         </div>
       </section>
 
