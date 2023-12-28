@@ -134,6 +134,10 @@ export default async function Home() {
               Além de deliciosas receitas, você encontra dicas nutricionais
               valiosas, elaboradas por profissionais especializados na área.
             </p>
+
+            <div className="flex justify-center lg:justify-start">
+              <Link href={'../nutrition'}>Catálogo nutricional</Link>
+            </div>
           </div>
         </section>
 
