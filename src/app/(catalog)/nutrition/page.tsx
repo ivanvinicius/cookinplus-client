@@ -13,7 +13,7 @@ export default async function Nutrition() {
 
       <section className="mt-4 flex flex-col divide-y divide-zinc-100 ">
         {ingredients.map(({ name, description }) => (
-          <div className="lg:max-w-3xl lg:py-4" key={name}>
+          <div className="py-4 lg:max-w-3xl" key={name}>
             <h2 className="font-nunito text-base font-bold text-zinc-700 lg:text-lg">
               {name}
             </h2>
